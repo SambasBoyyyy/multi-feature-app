@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
-import 'package:multi_feature_app/features/list/repository/List_repository.dart';
 
+
+import '../../../repository/List_repository.dart';
 import '../model/list_model.dart';
 
 part 'list_event.dart';

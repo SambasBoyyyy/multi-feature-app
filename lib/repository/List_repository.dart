@@ -1,5 +1,7 @@
 import 'package:multi_feature_app/features/list/model/list_model.dart';
-import 'package:multi_feature_app/features/list/resourse/api_provider.dart';
+
+import '../resourse/api_provider.dart';
+
 
 class ListRepository{
   final ApiProvider _apiProvider = ApiProvider();
