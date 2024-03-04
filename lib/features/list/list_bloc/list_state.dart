@@ -11,6 +11,10 @@ abstract class ListState extends Equatable{
 class ListInitial extends ListState {}
 class ListLoading extends ListState {}
 class ListLoaded extends ListState {
-  https://www.youtube.com/watch?v=rG7LY0BkvG8
+ final List<ListModel> list;
+const ListLoaded({required this.list});
 }
-class ListError extends ListState {}
+class ListError extends ListState {
+  final String? error;
+  const ListError({required this.error});
+}
