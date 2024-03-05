@@ -15,6 +15,6 @@ class ListLoaded extends ListState {
 const ListLoaded({required this.list});
 }
 class ListError extends ListState {
-  final String? error;
+  final String error;
   const ListError({required this.error});
 }
