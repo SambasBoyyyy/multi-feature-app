@@ -1,44 +1,38 @@
 class ListModel {
   String status;
   String message;
-  Map<String, dynamic> error;
+  Error error;
   Data data;
 
-  ListModel({required this.status, required this.message, required this.error, required this.data});
+  ListModel({
+    required this.status,
+    required this.message,
+    required this.error,
+    required this.data,
+  });
 
-  factory ListModel.fromJson(Map<String, dynamic> json) {
-    return ListModel(
-      status: json['status'],
-      message: json['message'],
-      error: json['error'],
-      data: Data.fromJson(json['data']),
-    );
-  }
 }
 
 class Data {
-  int totalUnread;
+  int totalunread;
   List<Result> results;
 
-  Data({required this.totalUnread, required this.results});
+  Data({
+    required this.totalunread,
+    required this.results,
+  });
 
-  factory Data.fromJson(Map<String, dynamic> json) {
-    return Data(
-      totalUnread: json['totalunread'],
-      results: List<Result>.from(json['results'].map((x) => Result.fromJson(x))),
-    );
-  }
 }
 
 class Result {
   int id;
   int userId;
-  String image;
-  String title;
-  String description;
-  String readStatus;
+  String? image;
+  Title title;
+  Description description;
+  ReadStatus readStatus;
   DateTime createdAt;
-  DateTime updatedAt;
+  DateTime? updatedAt;
   dynamic deletedAt;
 
   Result({
@@ -50,20 +44,26 @@ class Result {
     required this.readStatus,
     required this.createdAt,
     required this.updatedAt,
-    this.deletedAt,
+    required this.deletedAt,
   });
 
-  factory Result.fromJson(Map<String, dynamic> json) {
-    return Result(
-      id: json['id'],
-      userId: json['user_id'],
-      image: json['image'],
-      title: json['title'],
-      description: json['description'],
-      readStatus: json['read_status'],
-      createdAt: DateTime.parse(json['created_at']),
-      updatedAt: DateTime.parse(json['updated_at']),
-      deletedAt: json['deleted_at'],
-    );
-  }
+}
+
+enum Description {
+  DESCRIPTION_DESCRIPTION,
+  FINALLY_TIME_TO_GO_TO_BED
+}
+
+enum ReadStatus {
+  NO,
+  YES
+}
+
+enum Title {
+  DONE,
+  TITLE_DESCRIPTION
+}
+
+class Error {
+  Error();
 }
