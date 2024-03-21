@@ -1,4 +1,4 @@
-import 'package:multi_feature_app/features/list/model/list_model.dart';
+import 'package:multi_feature_app/features/list/model/list_model_0.dart';
 
 import '../resourse/api_provider.dart';
 

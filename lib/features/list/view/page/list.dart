@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:multi_feature_app/features/list/model/list_model.dart';
+import 'package:multi_feature_app/features/list/model/list_model_0.dart';
 import 'package:multi_feature_app/features/list/view/list_bloc/list_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 class ListScreen extends StatefulWidget {

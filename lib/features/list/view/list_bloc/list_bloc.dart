@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 import '../../../../repository/List_repository.dart';
-import '../../model/list_model.dart';
+import '../../model/list_model_0.dart';
 
 
 

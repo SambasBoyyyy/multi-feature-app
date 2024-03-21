@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:multi_feature_app/features/list/model/list_model.dart';
+import 'package:multi_feature_app/features/list/model/list_model_0.dart';
 
 class ApiProvider{
   Dio dio = Dio();
