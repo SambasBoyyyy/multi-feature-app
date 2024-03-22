@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'features/list/view/page/list.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      MaterialApp(
+        home: MyApp(),
+      ),);
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ListScreen();
+    return const ListScreen();
   }
 }
 

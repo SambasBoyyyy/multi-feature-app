@@ -1,5 +1,5 @@
-class ListModel {
-  ListModel({
+class ListModel_0 {
+  ListModel_0({
     required this.status,
     required this.message,
     required this.error,
@@ -10,7 +10,7 @@ class ListModel {
   late final Error error;
   late final Data data;
 
-  ListModel.fromJson(Map<String, dynamic> json){
+  ListModel_0.fromJson(Map<String, dynamic> json){
     status = json['status'];
     message = json['message'];
     error = Error.fromJson(json['error']);

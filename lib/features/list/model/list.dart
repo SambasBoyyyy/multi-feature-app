@@ -4,13 +4,13 @@ import 'data.dart';
 part 'list.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class List {
+class ListModel {
   String status;
   String message;
   Error error;
   Data data;
 
-  List({
+  ListModel({
     required this.status,
     required this.message,
     required this.error,
@@ -18,9 +18,9 @@ class List {
   });
 
 
-  factory List.fromJson(Map<String,dynamic> data) => _$ListFromJson(data);
+  factory ListModel.fromJson(Map<String,dynamic> data) => _$ListModelFromJson(data);
 
-  Map<String,dynamic> toJson() => _$ListToJson(this);
+  Map<String,dynamic> toJson() => _$ListModelToJson(this);
 
 
 }

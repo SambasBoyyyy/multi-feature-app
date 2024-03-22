@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 import '../../../../repository/List_repository.dart';
-import '../../model/list_model_0.dart';
+import '../../model/list.dart';
 
 
 
@@ -19,13 +19,14 @@ class ListBloc extends Bloc<ListEvent, ListState> {
     on<ListEvent>((event, emit) async {
      try{
        emit(ListLoading());
-       print('list created');
-       final List<ListModel> list = await listRepository.fetchList();
-       print(list);
+
+       ListModel list = await listRepository.fetchList();
+       print(list.data.results[0].title);
        emit(ListLoaded(list: list));
-       if(list[0].error!=null){
-         print('here');
-         emit(ListError(error: list[0].status));
+       print('list created');
+       if(list.error==null){
+         print(list.error);
+         emit(ListError(error: list.status));
        }
      } on NetworkError{
        emit(const ListError(error: "Failed to fetch data is your device online"));

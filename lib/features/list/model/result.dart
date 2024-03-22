@@ -4,26 +4,26 @@ part 'result.g.dart';
 
 @JsonSerializable()
 class Results {
-  int id;
-  int userId;
+  int? id;
+  int? userId;
   String? image;
-  String title;
-  String description;
-  String readStatus;
-  DateTime createdAt;
+  String? title;
+  String? description;
+  String? readStatus;
+  DateTime? createdAt;
   dynamic updatedAt;
   dynamic deletedAt;
 
   Results({
-    required this.id,
-    required this.userId,
-    required this.image,
-    required this.title,
-    required this.description,
-    required this.readStatus,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.deletedAt,
+     this.id,
+     this.userId,
+     this.image,
+     this.title,
+     this.description,
+     this.readStatus,
+     this.createdAt,
+     this.updatedAt,
+     this.deletedAt,
   });
 
   factory Results.fromJson(Map<String,dynamic> data) => _$ResultsFromJson(data);
