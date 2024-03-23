@@ -6,7 +6,7 @@ import 'package:multi_feature_app/features/list/model/list.dart';
 class ApiProvider{
   Dio dio = Dio();
   final String _url = "http://sherpur.rbfgroupbd.com/get_notification?page=1&pageSize=18";
-  final String token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzExMDM5Nzc3LCJleHAiOjE3MTExMjYxNzd9.IA38OCwt7fmTc5JWIjP3jTc5i0e3pihTqPcBScWdI0o";
+  final String token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzExMTMzNDEzLCJleHAiOjE3MTEyMTk4MTN9.37EnXGuuizA6nzVXxvSEsV8NxJGzIE8aAdO9PMb79b4";
 
   Future<ListModel> fetchList() async {
     try{

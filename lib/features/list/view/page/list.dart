@@ -25,6 +25,11 @@ class _ListScreenState extends State<ListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('List Screen'),
+        centerTitle: true,
+        actions: [
+          IconButton(onPressed: () => {}, icon: const Icon(Icons.search)),
+          IconButton(onPressed: () => {}, icon: const Icon(Icons.edit)),
+        ],
       ),
       body: _buildList(context),
     );
@@ -41,12 +46,29 @@ class _ListScreenState extends State<ListScreen> {
             return Center(child: CircularProgressIndicator());
           } else if (state is ListLoaded) {
             return ListView.builder(
+              reverse: true,
               itemCount: state.list.data.results.length,
               itemBuilder: (context, index) {
                 Results listModel = state.list.data.results[index];
-                return ListTile(
-                  title: Text(listModel.title ?? 'No title'),
-                   subtitle: Text(listModel.description??"No Des"),
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 5.0,horizontal: 5.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 5,
+                        offset: Offset(0, 0),
+                      ),
+                    ],
+                  ),
+                  child: ListTile(
+                    title: Text(listModel.title ?? 'No title'),
+                     leading: IconButton(onPressed: () => {}, icon: const Icon(Icons.check_box_outline_blank)),
+                     subtitle: Text(listModel.description??"No Des"),
+                    onTap: (){},
+                  ),
                 );
               },
             );
