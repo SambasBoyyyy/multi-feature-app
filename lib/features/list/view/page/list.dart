@@ -47,9 +47,9 @@ class _ListScreenState extends State<ListScreen> {
           } else if (state is ListLoaded) {
             return ListView.builder(
               reverse: true,
-              itemCount: state.list.data.results.length,
+              itemCount: state.list.length,
               itemBuilder: (context, index) {
-                Results listModel = state.list.data.results[index];
+                Results listModel = state.list[index];
                 return Container(
                   margin: EdgeInsets.symmetric(vertical: 5.0,horizontal: 5.0),
                   decoration: BoxDecoration(
